@@ -1,6 +1,6 @@
 {
-  "name": "react-native-document-scanner-plugin",
-  "version": "0.9.1",
+  "name": "@gennadysx/react-native-document-scanner-plugin",
+  "version": "1.1.0",
   "description": "A React Native plugin that lets you scan documents using Android and iOS",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -39,13 +39,13 @@
     "ios",
     "android"
   ],
-  "repository": "https://github.com/websitebeaver/react-native-document-scanner-plugin",
-  "author": "David Marcus <david@websitebeaver.com> (https://github.com/websitebeaver)",
+  "repository": "https://github.com/gennadysx/react-native-document-scanner-plugin",
+  "author": "David Marcus <david@websitebeaver.com> (https://github.com/websitebeaver) and Gennady Sabirovsky <https://github.com/gennadysx>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/websitebeaver/react-native-document-scanner-plugin/issues"
+    "url": "https://github.com/gennadysx/react-native-document-scanner-plugin/issues"
   },
-  "homepage": "https://github.com/websitebeaver/react-native-document-scanner-plugin#readme",
+  "homepage": "https://github.com/gennadysx/react-native-document-scanner-plugin#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },

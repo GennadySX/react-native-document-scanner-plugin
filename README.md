@@ -1,6 +1,6 @@
 # React Native Document Scanner
 
-[![Npm package version](https://img.shields.io/npm/v/react-native-document-scanner-plugin/latest.svg?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/react-native-document-scanner-plugin) [![npm dev dependency version](https://img.shields.io/npm/dependency-version/react-native-document-scanner-plugin/dev/react-native?color=61DAFB&logo=react&style=for-the-badge)](https://github.com/WebsiteBeaver/react-native-document-scanner-plugin/blob/master/package.json)
+[![Npm package version](https://img.shields.io/npm/v/react-native-document-scanner-plugin/latest.svg?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/@gennadysx/react-native-document-scanner-plugin) [![npm dev dependency version](https://img.shields.io/npm/dependency-version/react-native-document-scanner-plugin/dev/react-native?color=61DAFB&logo=react&style=for-the-badge)](https://github.com/gennadysx/react-native-document-scanner-plugin/blob/master/package.json)
 
 This is a React Native plugin that lets you scan documents using Android and iOS. You can use it to create
 apps that let users scan notes, homework, business cards, receipts, or anything with a rectangular shape.
@@ -12,7 +12,7 @@ apps that let users scan notes, homework, business cards, receipts, or anything 
 ## Install
 
 ```bash
-npm install react-native-document-scanner-plugin
+npm install @gennadysx/react-native-document-scanner-plugin
 ```
 
 After installing the plugin, you need to follow the steps below
@@ -47,7 +47,7 @@ cd ios && pod install && cd ..
 ```javascript
 import React, { useState, useEffect } from 'react'
 import { Image } from 'react-native'
-import DocumentScanner from 'react-native-document-scanner-plugin'
+import DocumentScanner from '@gennadysx/react-native-document-scanner-plugin'
 
 export default () => {
   const [scannedImage, setScannedImage] = useState();
@@ -55,7 +55,7 @@ export default () => {
   const scanDocument = async () => {
     // start the document scanner
     const { scannedImages } = await DocumentScanner.scanDocument()
-  
+
     // get back an array with scanned image file paths
     if (scannedImages.length > 0) {
       // set the img src, so we can view the first scanned image
@@ -102,14 +102,14 @@ Here's what this example looks like with several items
 
 ### Limit Number of Scans
 
-You can limit the number of scans. For example if your app lets a user scan a business 
+You can limit the number of scans. For example if your app lets a user scan a business
 card you might want them to only capture the front and back. In this case you can set
 maxNumDocuments to 2. This only works on Android.
 
 ```javascript
 import React, { useState, useEffect } from 'react'
 import { Image } from 'react-native'
-import DocumentScanner from 'react-native-document-scanner-plugin'
+import DocumentScanner from '@gennadysx/react-native-document-scanner-plugin'
 
 export default () => {
   const [scannedImage, setScannedImage] = useState();
@@ -119,7 +119,7 @@ export default () => {
     const { scannedImages } = await DocumentScanner.scanDocument({
       maxNumDocuments: 2
     })
-  
+
     // get back an array with scanned image file paths
     if (scannedImages.length > 0) {
       // set the img src, so we can view the first scanned image
@@ -146,14 +146,14 @@ export default () => {
 
 ### Remove Cropper
 
-You can automatically accept the detected document corners, and prevent the user from 
+You can automatically accept the detected document corners, and prevent the user from
 making adjustments. Set letUserAdjustCrop to false to skip the crop screen. This limits
 the max number of scans to 1. This only works on Android.
 
 ```javascript
 import React, { useState, useEffect } from 'react'
 import { Image } from 'react-native'
-import DocumentScanner from 'react-native-document-scanner-plugin'
+import DocumentScanner from '@gennadysx/react-native-document-scanner-plugin'
 
 export default () => {
   const [scannedImage, setScannedImage] = useState();
@@ -163,7 +163,7 @@ export default () => {
     const { scannedImages } = await DocumentScanner.scanDocument({
       letUserAdjustCrop: false
     })
-  
+
     // get back an array with scanned image file paths
     if (scannedImages.length > 0) {
       // set the img src, so we can view the first scanned image
@@ -255,17 +255,17 @@ Opens the camera, and starts the document scan
 This plugin doesn't run in Expo Go. It works with Expo, and you can avoid manually changing iOS and Android files by following these steps.
 
 ```bash
-npx expo install react-native-document-scanner-plugin
+npx expo install @gennadysx/react-native-document-scanner-plugin
 ```
 
-Add `react-native-document-scanner-plugin` to plugins in `app.json` or `app.config.json`.
+Add `@gennadysx/react-native-document-scanner-plugin` to plugins in `app.json` or `app.config.json`.
 
 ```javascript
 {
   "name": "my expo app",
   "plugins": [
     [
-      "react-native-document-scanner-plugin",
+      "@gennadysx/react-native-document-scanner-plugin",
       {
         "cameraPermission": "We need camera access, so you can scan documents"
       }
@@ -298,7 +298,7 @@ Here's an example of how to request camera permissions.
 ```javascript
 import React, { useState, useEffect } from 'react'
 import { Platform, PermissionsAndroid, Image, Alert } from 'react-native'
-import DocumentScanner from 'react-native-document-scanner-plugin'
+import DocumentScanner from '@gennadysx/react-native-document-scanner-plugin'
 
 export default () => {
   const [scannedImage, setScannedImage] = useState();
@@ -314,7 +314,7 @@ export default () => {
 
     // start the document scanner
     const { scannedImages } = await DocumentScanner.scanDocument()
-  
+
     // get back an array with scanned image file paths
     if (scannedImages.length > 0) {
       // set the img src, so we can view the first scanned image
@@ -339,7 +339,8 @@ export default () => {
 
 ## License
 
-Copyright 2022 David Marcus
+Copyright 2022 David Marcus\
+Modified by GennadySX
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 

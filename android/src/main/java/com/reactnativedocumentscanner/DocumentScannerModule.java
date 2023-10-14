@@ -17,8 +17,8 @@ import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.bridge.WritableNativeArray;
 import com.facebook.react.bridge.WritableNativeMap;
 import com.facebook.react.module.annotations.ReactModule;
-import com.websitebeaver.documentscanner.DocumentScanner;
-import com.websitebeaver.documentscanner.constants.DocumentScannerExtra;
+import com.gennadysx.documentscanner.DocumentScanner;
+import com.gennadysx.documentscanner.constants.DocumentScannerExtra;
 import java.util.ArrayList;
 
 @ReactModule(name = DocumentScannerModule.NAME)
